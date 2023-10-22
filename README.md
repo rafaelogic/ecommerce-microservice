@@ -87,7 +87,23 @@ You can modify the port numbers in the `docker-compose.yml` file if these ports 
 
 ## Usage
 
-Describe how to use your application, including examples of API requests, if applicable.
+**Catalog Endpoints**
+```bash
+# Get a paginate list of all products
+GET: http://localhost:8081/api/v1/products
+
+# Get a product
+GET: http://localhost:8081/api/v1/products{product}
+```
+
+**Checkout Endpoints**
+```bash
+# Get a placed order
+GET: http://localhost:8082/api/v1/orders/{order}
+
+# Store placed order and trigger sending email notification
+POST: http://localhost:8082/api/v1/orders
+```
 
 ## Running Tests
 
